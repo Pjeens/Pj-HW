@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-C:\Users\Jeens\Dropbox\PC\Documents\GitHub\Pj-HW\Diagrams\Diagram.drawio.png
+Diagrams/Diagram.drawio.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -95,8 +95,9 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to http://104.42.47.109:5601/app/kibana  to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
+- Which file is the playbook? Where do you copy it? /etc/ansible/files/filebeat-playbook
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
+    http://104.42.47.109:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
