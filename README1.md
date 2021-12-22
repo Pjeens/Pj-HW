@@ -32,12 +32,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-| Name             | Function | IP Address | Operating System |
-|------------------|----------|------------|------------------|
-|JumpBoxProvisioner| Gateway  | 10.0.0.1   | Linux            |
-| web-1            | webserver| 10.0.0.5   | Linux            |
-| web-2            | webserver| 10.0.0.6   | Linux            |
-| Elk VM           | ELK      | 10.1.0.4   | Linux            |
+| Name             | Function | IP Address | Operating System          |
+|------------------|----------|------------|---------------------------|
+|JumpBoxProvisioner| Gateway  | 10.0.0.1   | Linux UbuntuServer 18_04  |
+| web-1            | webserver| 10.0.0.5   | Linux UbuntuServer 18_04  |
+| web-2            | webserver| 10.0.0.6   | Linux UbuntuServer 18_04  |
+| Elk VM           | ELK      | 10.1.0.4   | Linux UbuntuServer 18_04  |
 
 ### Access Policies
 
@@ -84,8 +84,8 @@ We have installed the following Beats on these machines:
 -  Metricbeat and  Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- Both of them ( Filebeat and metribeat) allow us to collect inforamtion. Both of them are lightweight shipper. The difference between them is filebeat manage log and filrd, it help us to 
-  keep everything simple.  Metricbeat manage metric and give us a statistics. 
+- Both of them ( Filebeat and metribeat) allow us to collect inforamtion. Both of them are lightweight shipper. The difference between them is filebeat manage log and files, it help us to 
+  keep everything simple.  Metricbeat manage metrics and give us a statistics. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
