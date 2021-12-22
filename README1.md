@@ -84,7 +84,8 @@ We have installed the following Beats on these machines:
 -  Metricbeat and  Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- Metricbeat periodically collects metrics from systems and services where you can find top-like statistics for every process running
+- Both of them ( Filebeat and metribeat) allow us to collect inforamtion. Both of them are lightweight shipper. The difference between them is filebeat manage log and filrd, it help us to 
+  keep everything simple.  Metricbeat manage metric and give us a statistics. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
