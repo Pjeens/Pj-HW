@@ -26,8 +26,9 @@ it provides, by controlling access to other machines by allowing connections fro
 a gateway router as an origination point to connect to other servers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- Filebeats watches for changes in the file system
-- Metricbeat records machine metric data and statistics, such as uptime.
+- Filebeats monitor the system and wath for changes
+- Metricbeat helps you monitor your servers and the services they host by collecting metrics from the operating 
+  system and services. This guide describes how to get started quickly with metrics collection
 
 The configuration details of each machine may be found below.
 
@@ -45,13 +46,13 @@ The machines on the internal network are not exposed to the public Internet.
 Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 216.58.81.80
 
 Machines within the network can only be accessed by _SSH _.
-- Jump Box is the only machine allowed access to the ELK VM by using a public Ip : 40.112.142.168
+- Jump Box is the only machine allowed access to the ELK sever by using : 40.112.142.168
 
 A summary of the access policies in place can be found in the table below.
 
 | Name              | Publicly Accessible | Allowed IP Addresses |
 |-------------------|---------------------|----------------------|
-| JumpBoxProvisioner| No                  | 20.127.130.6   |
+| JumpBoxProvisioner| No                  | 20.127.130.6         |
 | web-1             | No                  | 10.0.0.5             |
 | web-2             | No                  | 10.0.0.6             |
 | Elk VM            | No                  | 10.1.0.4             |
@@ -60,13 +61,14 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- automatically configuring files with Ansible allows users to deploy mutilple servers using a single playbook (IaC)
+- it's allow you to deploy a multitude of servers using a single playbook
 
 The playbook implements the following tasks:
-- Install docker.io and python-pip apt packages
+- Install docker.io 
+- Install docker container
+- Launch docker container: elk
 - Install python-pip package
-- Downloads docker container sebp/elk:761
-- Download and launch docker elk container
+
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -74,8 +76,8 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- 10.0.0.5
-- 10.0.0.6
+- 10.0.0.5 for web 1
+- 10.0.0.6 wor web 2
 
 
 We have installed the following Beats on these machines:
