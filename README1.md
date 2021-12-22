@@ -77,11 +77,11 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - 10.0.0.5 for web 1
-- 10.0.0.6 wor web 2
+- 10.0.0.6 for web 2
 
 
 We have installed the following Beats on these machines:
-- Filebeat and Metricbeat
+-  Metricbeat and  Filebeat
 
 These Beats allow us to collect the following information from each machine:
 - Metricbeat periodically collects metrics from systems and services where you can find top-like statistics for every process running
@@ -90,12 +90,14 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeatconfig.yml file to /etc/ansible/files/.
-- Update the /etc/ansible/host file to include groupded private IP address of webservers separate from the private IP address of the the ELK VM
-- Run the playbook, and navigate to http://104.42.47.109:5601/app/kibana  to check that the installation worked as expected.
+- Copy the playbook config file to /etc/ansible/files/.
+- Update the configuration files in /etc/ansible/files by including private IP address of webservers and ELK
+- Run the playbook, and navigate to http://ELK_Server(IPadress):5601/app/kibana  to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - Which 
+- _Which file is the playbook? Where do you copy it?_
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install 
     http://104.42.47.109:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
